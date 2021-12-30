@@ -1,25 +1,29 @@
 import React from 'react';
 import './App.css';
-import Login from './components/Login';
-import Profile from './components/Profile';
-
-import { useAuth0 } from '@auth0/auth0-react';
+import {NavBar, Footer, Loading, Contacts} from './components';
+import { Container } from "react-bootstrap";
 import { Route, Routes } from 'react-router-dom';
+import { Home, Profile, ExternalApi } from "./views";
+import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
-  const { isLoading } = useAuth0();
-
-  if (isLoading) return <div>Loading...</div>
+  const {isLoading} = useAuth0();
+  if(isLoading){
+    return <Loading />
+  }
 
   return (
-    <>
-      <Login />
-      <Profile />
-      <Routes>                
-             <Route exact path='/' component={Login}/> 
-             <Route path='/features' component={Login}/>            
+    <div id="app" className="d-flex flex-column h-100 bg-dark">
+    <NavBar />
+    <Container className="flex-grow-1 mt-5">
+      <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/external-api" element={<Contacts />} />
       </Routes>
-    </>
+    </Container>
+    <Footer />
+  </div>
 
   );
 }
