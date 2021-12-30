@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {NavBar, Footer, Loading, AddUser} from './components';
+import {NavBar, Footer, Loading, AddUser, EditUser, ViewUser} from './components';
 import { Container } from "react-bootstrap";
 import { Route, Routes } from 'react-router-dom';
 import { Home, Profile, Database } from "./views";
@@ -20,7 +20,9 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/database" element={<Database />} />
-          <Route path="/useradd" element={<AddUser />} />
+          <Route path="/user/add" element={<AddUser />} />
+          <Route path="/users/edit/:id" element={<EditUser />} />
+          <Route path="/users/:id" element={<ViewUser />} />
       </Routes>
     </Container>
     <Footer />

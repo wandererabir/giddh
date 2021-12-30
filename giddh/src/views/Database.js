@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import {AddUser} from "../components";
 const Database = () => {
     const [users, setUser] = useState([]);
 
@@ -42,9 +41,14 @@ const Database = () => {
                   <td>{user.username}</td>
                   <td>{user.email}</td>
                   <td>
-                  <button className="btn btn-info mx-1">View</button>
-                  <button className="btn btn-primary mx-1">Edit</button>
-                  <button className="btn btn-danger mx-1" onClick={()=>deleteUser(user.id)}>Delete</button>
+                  <Link class="btn btn-primary mx-1" to={`/users/${user.id}`}>
+                    View
+                  </Link>
+                  <Link
+                    class="btn btn-outline-primary mx-1"
+                    to={`/users/edit/${user.id}`}
+                  >Edit</Link>
+                  <button className="btn-sm btn-danger mx-1" onClick={()=>deleteUser(user.id)}>Delete</button>
                   </td>
                 </tr>
               ))}

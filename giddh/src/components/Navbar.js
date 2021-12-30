@@ -4,14 +4,16 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
+import logo from "../assets/logo.svg";
 
 const MainNav = () => (
-  <Nav className="mr-auto ">
+  <Nav className="mr-auto">
     <Nav.Link
       as={RouterNavLink}
       to="/"
       exact
       activeClassName="router-link-exact-active "
+      className="text-white "
     >
       Home
     </Nav.Link>
@@ -20,6 +22,7 @@ const MainNav = () => (
       to="/profile"
       exact
       activeClassName="router-link-exact-active"
+      className="text-white "
     >
       Profile
     </Nav.Link>
@@ -28,11 +31,12 @@ const MainNav = () => (
       to="/database"
       exact
       activeClassName="router-link-exact-active"
+      className="text-white "
     >
       Database
     </Nav.Link>
 
-    <Link className="btn btn-outline-dark mr-5" to="/useradd">Add User</Link>
+    <Link className="btn btn-outline-dark text-white mr-5" to="/user/add">Add User</Link>
   </Nav>
 );
 
@@ -49,9 +53,11 @@ const AuthNav = () => {
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="md">
+    <Navbar bg="primary" expand="md">
       <Container>
-        <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
+        <Navbar.Brand as={RouterNavLink} className="logo" to="/" >
+        <img className="mb-1 app-logo" src={logo} alt="React logo" width="120" />
+        </Navbar.Brand>
         <MainNav />
         <AuthNav />
       </Container>
