@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import {NavBar, Footer, Loading, Contacts} from './components';
+import {NavBar, Footer, Loading, AddUser} from './components';
 import { Container } from "react-bootstrap";
 import { Route, Routes } from 'react-router-dom';
-import { Home, Profile, ExternalApi } from "./views";
+import { Home, Profile, Database } from "./views";
 import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
       <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/external-api" element={<Contacts />} />
+          <Route path="/database" element={<Database />} />
+          <Route path="/useradd" element={<AddUser />} />
       </Routes>
     </Container>
     <Footer />

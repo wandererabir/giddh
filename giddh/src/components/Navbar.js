@@ -1,17 +1,17 @@
 import React from "react";
-import { NavLink as RouterNavLink } from "react-router-dom";
+import { NavLink as RouterNavLink, Link } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
 
 const MainNav = () => (
-  <Nav className="mr-auto">
+  <Nav className="mr-auto ">
     <Nav.Link
       as={RouterNavLink}
       to="/"
       exact
-      activeClassName="router-link-exact-active"
+      activeClassName="router-link-exact-active "
     >
       Home
     </Nav.Link>
@@ -25,12 +25,14 @@ const MainNav = () => (
     </Nav.Link>
     <Nav.Link
       as={RouterNavLink}
-      to="/external-api"
+      to="/database"
       exact
       activeClassName="router-link-exact-active"
     >
       Database
     </Nav.Link>
+
+    <Link className="btn btn-outline-dark mr-5" to="/useradd">Add User</Link>
   </Nav>
 );
 
