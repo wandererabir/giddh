@@ -28,7 +28,7 @@ const AddUser = () => {
   const onSubmit = async e => {
     e.preventDefault();
     toast.info('Added a user');
-    await axios.post("http://localhost:3002/users", users);
+    await axios.post("https://fake-server-walkover.herokuapp.com/users", users);
     await delay(5000);
     history('/database', { replace: true });
   };

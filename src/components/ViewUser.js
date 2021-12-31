@@ -19,7 +19,7 @@ const ViewUser = () => {
     loadUser();
   }, []);
   const loadUser = async () => {
-    const res = await axios.get(`http://localhost:3002/users/${id}`);
+    const res = await axios.get(`https://fake-server-walkover.herokuapp.com/users/${id}`);
     setUser(res.data);
   };
   const formatter = buildFormatter(englishStrings)

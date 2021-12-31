@@ -13,13 +13,13 @@ const Database = () => {
     }, []);
   
     const loadUsers = async () => {
-      const result = await axios.get(`${JSON_API}/users`);
+      const result = await axios.get("https://fake-server-walkover.herokuapp.com/users");
       setUser(result.data.reverse());
     };
   
     const deleteUser = async id => {
       toast.warning('Deleted the user');
-      await axios.delete(`http://localhost:3002/users/${id}`);
+      await axios.delete(`https://fake-server-walkover.herokuapp.com/users/${id}`);
       loadUsers();
     };
   

@@ -31,12 +31,12 @@ const EditUser = () => {
   const onSubmit = async e => {
     e.preventDefault();
     toast.info('Edited a user');
-    await axios.put(`http://localhost:3002/users/${id}`, user);
+    await axios.put(`https://fake-server-walkover.herokuapp.com/users/${id}`, user);
     await delay(5000);
     history('/database', { replace: true });
   };
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:3002/users/${id}`);
+    const result = await axios.get(`https://fake-server-walkover.herokuapp.com/users/${id}`);
     setUser(result.data);
   };
 
