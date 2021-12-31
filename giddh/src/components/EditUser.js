@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-
 const EditUser = () => {
   let history = useNavigate();
   const { id } = useParams();
@@ -11,24 +10,24 @@ const EditUser = () => {
     username: "",
     email: "",
     phone: "",
-    website: ""
+    website: "",
+    timestamp:"",
+    actions:""
   });
-
-  const { name, username, email, phone, website } = user;
+  const { name, username, email, phone, website} = user;
+  user.timestamp=Date().toLocaleString();
+  user.actions="edited";
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
-
   useEffect(() => {
     loadUser();
   }, []);
-
   const onSubmit = async e => {
     e.preventDefault();
     await axios.put(`http://localhost:3002/users/${id}`, user);
     history('/database', { replace: true });
   };
-
   const loadUser = async () => {
     const result = await axios.get(`http://localhost:3002/users/${id}`);
     console.log(result);
@@ -95,5 +94,3 @@ const EditUser = () => {
     </div>
   );
 };
-
-export default EditUser;

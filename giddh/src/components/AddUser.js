@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
-
 const AddUser = () => {
   let history = useNavigate();
-  const [user, setUser] = useState({
+  const [users, setUser] = useState({
     name: "",
     username: "",
     email: "",  
     phone: "",
-    website: ""
+    website: "",
+    timestamp:Date().toLocaleString(),
+    actions:"added"
   });
-
-  const { name, username, email, phone, website } = user;
+  const { name, username, email, phone, website} = users;
   const onInputChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    setUser({ ...users, [e.target.name]: e.target.value });
   };
-
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:3002/users", user);
+    await axios.post("http://localhost:3002/users", users);
     history('/database', { replace: true });
   };
   return (
@@ -83,5 +82,4 @@ const AddUser = () => {
     </div>
   );
 };
-
 export default AddUser;
