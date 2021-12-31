@@ -20,6 +20,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/database" element={<Database />} />
+
           <Route path="/user/add" element={<AddUser />} />
           <Route path="/users/edit/:id" element={<EditUser />} />
           <Route path="/users/:id" element={<ViewUser />} />
