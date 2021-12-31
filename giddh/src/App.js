@@ -1,32 +1,34 @@
 import React from 'react';
 import './App.css';
-import Login from './components/Login';
-import Profile from './components/Profile';
-
-import { useAuth0 } from '@auth0/auth0-react';
+import {NavBar, Footer, Loading, AddUser, EditUser, ViewUser} from './components';
+import { Container } from "react-bootstrap";
 import { Route, Routes } from 'react-router-dom';
-import Database from './components/Database';
+import { Home, Profile, Database } from "./views";
+import { useAuth0 } from '@auth0/auth0-react';
+
 
 function App() {
-  const { isLoading } = useAuth0();
-
-  if (isLoading) return <div>Loading...</div>
+  const {isLoading} = useAuth0();
+  if(isLoading){
+    return <Loading />
+  }
 
   return (
-    <>
-      <Login />
-      <Profile />
-      <Routes>                
-             <Route exact path='/' component={Login}/> 
-             <Route path='/features' component={Login}/>            
+    <div id="app" className="d-flex flex-column h-100 bg-dark">
+    <NavBar />
+    <Container className="flex-grow-1 mt-5">
+      <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/database" element={<Database />} />
+          <Route path="/user/add" element={<AddUser />} />
+          <Route path="/users/edit/:id" element={<EditUser />} />
+          <Route path="/users/:id" element={<ViewUser />} />
       </Routes>
+    </Container>
+    <Footer />
+  </div>
 
-      <div className='row'>
-        <div className='col-md-8 offset-md-1'>
-          <Database />
-        </div>
-      </div>
-    </>
 
   );
 }
