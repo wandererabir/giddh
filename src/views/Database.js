@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { JSON_API } from '../utils/Constants';
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +13,7 @@ const Database = () => {
     }, []);
   
     const loadUsers = async () => {
-      const result = await axios.get("http://localhost:3002/users");
+      const result = await axios.get(`${JSON_API}/users/${id}`);
       setUser(result.data.reverse());
     };
   
