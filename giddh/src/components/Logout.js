@@ -7,10 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Logout = () => {
   const { logout} = useAuth0();
-
   return (
     <Button className='bg-white text-dark' onClick={() => logout()}>
-    Log In
+    Logout
  </Button>
     
   );
