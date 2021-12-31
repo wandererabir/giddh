@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Home, Profile, Database } from "./views";
 import { useAuth0 } from '@auth0/auth0-react';
 
+
 function App() {
   const {isLoading} = useAuth0();
   if(isLoading){
@@ -28,6 +29,7 @@ function App() {
     </Container>
     <Footer />
   </div>
+
 
   );
 }
