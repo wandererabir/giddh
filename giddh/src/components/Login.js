@@ -7,7 +7,7 @@ const Login = () => {
 
     return (
             <Button className='bg-white text-dark' onClick={() => loginWithRedirect()}>
-               Logout
+               Log In
             </Button>
     );
 };

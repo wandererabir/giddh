@@ -22,7 +22,7 @@ const MainNav = () => (
       to="/profile"
       exact
       activeClassName="router-link-exact-active"
-      className="text-white "
+      className="text-white"
     >
       Profile
     </Nav.Link>
@@ -41,7 +41,7 @@ const MainNav = () => (
 );
 
 const AuthNav = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated} = useAuth0();
 
   return(
     <Nav className="justify-content-end">
