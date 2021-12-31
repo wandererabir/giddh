@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const EditUser = () => {
   let history = useNavigate();
   const { id } = useParams();
-  console.log("Hi");
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -25,14 +30,17 @@ const EditUser = () => {
   }, []);
   const onSubmit = async e => {
     e.preventDefault();
+    toast.info('Edited a user');
     await axios.put(`http://localhost:3002/users/${id}`, user);
+    await delay(5000);
     history('/database', { replace: true });
   };
   const loadUser = async () => {
     const result = await axios.get(`http://localhost:3002/users/${id}`);
-    console.log(result);
     setUser(result.data);
   };
+
+
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">
@@ -89,6 +97,7 @@ const EditUser = () => {
             />
           </div>
           <button className="btn btn-warning btn-block">Update User</button>
+          <ToastContainer />
         </form>
       </div>
     </div>
