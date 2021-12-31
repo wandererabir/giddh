@@ -13,7 +13,7 @@ const Database = () => {
     }, []);
   
     const loadUsers = async () => {
-      const result = await axios.get(`${JSON_API}/users/${id}`);
+      const result = await axios.get(`${JSON_API}/users`);
       setUser(result.data.reverse());
     };
   
