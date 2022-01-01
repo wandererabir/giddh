@@ -42,6 +42,7 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 
 ## Sudo Code
 * Log In/ Sign Up using auth0
+     *
       `IF userlogin = true
         API call to get user data
         Assign data to variables
