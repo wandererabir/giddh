@@ -41,9 +41,9 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 ## Balsamiq designs
 
 ## Sudo Code
-* Log In/ Sign Up using auth0
+### Log In/ Sign Up using auth0
  
- Markup :`IF userlogin = true
+       `IF userlogin = true
           API call to get user data
           Assign data to variables
           Re-route user to dashboard
@@ -58,4 +58,13 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
          API creates a user metadata
          Re-route user to dashboard`
 
+### LogIn & Logout Button
+ 
+       `IF userlogin = true
+          Login btn changes to Logout btn
+          User metadata is fetched into Profile page
+       
+        ELSEIF userlogin = false 
+         Login btn remains
+         Profile page remains blank`
 
