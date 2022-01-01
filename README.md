@@ -4,13 +4,13 @@ It is a app where user can store user data in form of a table and perform CRUD o
 The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 
 ## Appendix 
-1. Tech Stack
-2. Team Intro
-3. Balsamiq designs
-4. Sudo Code
-5. Routes
-6. Running Locally
-7. Database/API
+1. [Tech Stack](# Tech Stack)
+2. [Team Intro]()
+3. [Balsamiq designs]()
+4. [Sudo Code]()
+5. [Routes]()
+6. [Running Locally]()
+7. [Database/API]()
 
 ## Tech Stack
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
