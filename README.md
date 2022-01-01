@@ -5,12 +5,12 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 
 ## Appendix 
 1. [Tech Stack](#tech-stack)
-2. [Team Intro]()
-3. [Balsamiq designs]()
-4. [Sudo Code]()
-5. [Routes]()
-6. [Running Locally]()
-7. [Database/API]()
+2. [Team Intro](#team-intro)
+3. [Balsamiq designs](#balsamiq-designs)
+4. [Sudo Code](#sudo-code)
+5. [Routes](#routes)
+6. [Running Locally](#running-locally)
+7. [Database/API](#database)
 
 ## Tech Stack
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
