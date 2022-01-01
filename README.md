@@ -140,7 +140,7 @@ For further information, read the [Setup Readme](https://github.com/wandererabir
 
 The project uses JSON Server that stimulates a backend REST service that performs GET,POST and DELETE to some data using a frontend applications. JSON Server is a simple project that helps you to setup a REST API with CRUD operations very fast.
 
-##### This is our personal [SERVER](https://fake-server-walkover.herokuapp.com/)
+#### This is our personal [SERVER](https://fake-server-walkover.herokuapp.com/)
 
 For further information, follow the [JSON Server Documentation](https://www.npmjs.com/package/json-server#getting-started)
 
