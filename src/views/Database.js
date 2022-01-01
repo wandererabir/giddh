@@ -30,6 +30,7 @@ const Database = () => {
         <div className="container-fluid bg-white">
           <div className="py-4">
             <h1>Database</h1>
+            <Link className="btn btn-outline-dark my-3" to="/user/add">Add User</Link>
             
             <table class="table border shadow">
               <thead class="thead-dark">

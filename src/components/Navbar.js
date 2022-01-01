@@ -36,7 +36,7 @@ const MainNav = () => (
       Database
     </Nav.Link>
 
-    <Link className="btn btn-outline-dark text-white mr-5" to="/user/add">Add User</Link>
+    
   </Nav>
 );
 
