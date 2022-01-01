@@ -122,7 +122,6 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 2. Change the JSON Server address
 3. Install the necessary
 4. Open a terminal & write `npm start`
-
-For further information, read the [Setup Readme](https://github.com/wandererabir/giddh/blob/main/Readme-setup.md) 
+* For further information, read the [Setup Readme](https://github.com/wandererabir/giddh/blob/main/Readme-setup.md) 
 
 
