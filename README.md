@@ -96,4 +96,13 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
           
         ELSE 
           Don't allow to edit operation
+          Show a error message
+          
+       Delete Users :
+       IF data exists
+          Fetch the data id
+          Remove the data from the server
+          
+        ELSE 
+          Don't allow to delete operation
           Show a error message`
