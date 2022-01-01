@@ -31,11 +31,12 @@ const ViewUser = () => {
       <h1 className="display-4 text-white">User Id: {id}</h1>
       <hr />
       <ul className="list-group w-50">
-        <li className="list-group-item">name: {user.name}</li>
-        <li className="list-group-item">user name: {user.username}</li>
-        <li className="list-group-item">email: {user.email}</li>
-        <li className="list-group-item">phone: {user.phone}</li>
-        <li className="list-group-item">website: {user.website}</li>
+        <li className="list-group-item">Name: {user.name}</li>
+        <li className="list-group-item">Username: {user.username}</li>
+        <li className="list-group-item">Email: {user.email}</li>
+        <li className="list-group-item">Phone: {user.phone}</li>
+        <li className="list-group-item">Website: {user.website}</li>
+        <li className="list-group-item">Done by: {user.Doneby}</li>
         <p className="text-white">{user.actions} <TimeAgo date={user.timestamp} formatter={formatter} /></p>
       </ul>
     </div>

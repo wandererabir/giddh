@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const AddUser = () => {
   let history = useNavigate();
   const delay = ms => new Promise(res => setTimeout(res, ms));
-  const {isAuthenticated, user} = useAuth0();
+  const {user} = useAuth0();
 
   const [users, setUser] = useState({
     name: "",
@@ -19,7 +19,8 @@ const AddUser = () => {
     phone: "",
     website: "",
     timestamp:Date().toLocaleString(),
-    actions:"added"
+    actions:"added",
+    Doneby:user.name
   });
   const { name, username, email, phone, website} = users;
   const onInputChange = e => {

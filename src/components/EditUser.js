@@ -3,27 +3,31 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 const EditUser = () => {
   let history = useNavigate();
   const { id } = useParams();
+  const {user} = useAuth0();
   const delay = ms => new Promise(res => setTimeout(res, ms));
 
-  const [user, setUser] = useState({
+  const [users, setUser] = useState({
     name: "",
     username: "",
     email: "",
     phone: "",
     website: "",
     timestamp:"",
-    actions:""
+    actions:"",
+    Doneby:""
   });
-  const { name, username, email, phone, website} = user;
-  user.timestamp=Date().toLocaleString();
-  user.actions="edited";
+  const { name, username, email, phone, website} = users;
+  users.timestamp=Date().toLocaleString();
+  users.actions="edited";
+  users.Doneby=user.name;
   const onInputChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    setUser({ ...users, [e.target.name]: e.target.value });
   };
   useEffect(() => {
     loadUser();
@@ -31,7 +35,7 @@ const EditUser = () => {
   const onSubmit = async e => {
     e.preventDefault();
     toast.info('Edited a user');
-    await axios.put(`https://fake-server-walkover.herokuapp.com/users/${id}`, user);
+    await axios.put(`https://fake-server-walkover.herokuapp.com/users/${id}`, users);
     await delay(5000);
     history('/database', { replace: true });
   };
