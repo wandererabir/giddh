@@ -41,21 +41,21 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 ## Balsamiq designs
 
 ## Sudo Code
-### Log In/ Sign Up using auth0
+* Log In/ Sign Up using auth0
  
-      `IF userlogin = true
-        API call to get user data
-        Assign data to variables
-        Re-route user to dashboard
+ Markup :`IF userlogin = true
+          API call to get user data
+          Assign data to variables
+          Re-route user to dashboard
        
-       ELSEIF userlogin failed 
-        Don't allow to get user data
-        Re-route user to home page 
+        ELSEIF userlogin failed 
+         Don't allow to get user data
+         Re-route user to home page 
         
-       ELSE
-        Sign Up using Google or email
-        Meet all the validations
-        API creates a user metadata
-        Re-route user to dashboard`
+        ELSE
+         Sign Up using Google or email
+         Meet all the validations
+         API creates a user metadata
+         Re-route user to dashboard`
 
 
