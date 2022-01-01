@@ -8,8 +8,8 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 2. Team Intro
 3. Balsamiq designs
 4. Sudo Code
-5. Running Locally
-6. Routes
+5. Routes
+6. Running Locally
 7. Database/API
 
 ## Tech Stack
@@ -38,6 +38,9 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 * Creating history of each data
 * Project documentation 
 
+## Balsamiq designs
 
+## Sudo Code
+*
 
 
