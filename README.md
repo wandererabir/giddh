@@ -106,3 +106,21 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
         ELSE 
           Don't allow to delete operation
           Show a error message`
+          
+## Routes
+* Home Page -> '/'
+* Profile Page -> '/Profile'
+* Database Page -> '/Database'
+* API -> '/https://fake-server-walkover.herokuapp.com/users'
+* Add User -> '/user/add'
+* Edit User -> '/user/edit/${id}'
+* View User/Delete User -> '/user/${id}'
+
+
+## Running Locally 
+1. Clone the Repository 
+2. Change the JSON Server address
+3. Install the necessary
+4. Open a terminal & write `npm start`  
+
+
