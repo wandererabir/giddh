@@ -10,7 +10,7 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 4. [Sudo Code](#sudo-code)
 5. [Routes](#routes)
 6. [Running Locally](#running-locally)
-7. [Database/API](#database)
+7. [Database/API](#api)
 
 ## Tech Stack
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -122,6 +122,27 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 2. Change the JSON Server address
 3. Install the necessary
 4. Open a terminal & write `npm start`
-* For further information, read the [Setup Readme](https://github.com/wandererabir/giddh/blob/main/Readme-setup.md) 
+
+For further information, read the [Setup Readme](https://github.com/wandererabir/giddh/blob/main/Readme-setup.md) 
+
+## API
+**Prefix:** `/users`
+
+`/users/..`
+
+* post -> AddUser
+
+`/users/../:id`
+
+* get -> EditUser, ViewUser
+* post -> EditUser
+* delete -> DeleteUser
+
+The project uses JSON Server that stimulates a backend REST service that performs GET,POST and DELETE to some data using a frontend applications. JSON Server is a simple project that helps you to setup a REST API with CRUD operations very fast.
+
+For further information, follow the [JSON Server Documentation](https://www.npmjs.com/package/json-server#getting-started)
+
+
+
 
 
