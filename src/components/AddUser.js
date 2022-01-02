@@ -23,6 +23,7 @@ const AddUser = () => {
     Doneby:user.name
   });
   const { name, username, email, phone, website} = users;
+  
   const onInputChange = e => {
     setUser({ ...users, [e.target.name]: e.target.value });
   };
@@ -43,17 +44,18 @@ const AddUser = () => {
             <input
               type="text"
               className="form-control form-control-lg mb-2"
-              placeholder="Enter Your Name"
+              placeholder="Enter User's Name"
               name="name"
               value={name}
               onChange={e => onInputChange(e)}
+              required
             />
           </div>
           <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg mb-2"
-              placeholder="Enter Your Username"
+              placeholder="Username"
               name="username"
               value={username}
               onChange={e => onInputChange(e)}
@@ -63,27 +65,30 @@ const AddUser = () => {
             <input
               type="email"
               className="form-control form-control-lg mb-2"
-              placeholder="Enter Your E-mail Address"
+              placeholder="E-mail Address"
               name="email"
               value={email}
               onChange={e => onInputChange(e)}
+              required
             />
           </div>
           <div className="form-group">
             <input
-              type="text"
+              type="tel"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
               className="form-control form-control-lg mb-2"
-              placeholder="Enter Your Phone Number"
+              placeholder="Phone Number"
               name="phone"
               value={phone}
               onChange={e => onInputChange(e)}
+              required
             />
           </div>
           <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg mb-2"
-              placeholder="Enter Your Website Name"
+              placeholder="Website Name"
               name="website"
               value={website}
               onChange={e => onInputChange(e)}
