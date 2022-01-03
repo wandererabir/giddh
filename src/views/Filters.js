@@ -73,9 +73,9 @@ const DataTable = () => {
   }
   else{
     return(
-      <Container className="mb-5 text-white text-center">
+      <div className="container-fluid mb-5 text-white text-center">
       <h1>You can't access database</h1>
-     </Container>
+     </div>
     )
   }
 }
