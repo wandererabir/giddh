@@ -36,6 +36,7 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 * Creating Table for user data
 * Creating webhooks whenever a opertion is executed
 * Creating history of each data
+* Filter feature for data columns
 * Project documentation 
 
 ## Balsamiq designs
