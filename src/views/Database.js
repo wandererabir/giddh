@@ -6,30 +6,19 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth0 } from '@auth0/auth0-react';
 
-const Database = () => {
-    const [users, setUser] = useState([]);
-    const {isAuthenticated, user} = useAuth0();
-
-    useEffect(() => {
-      loadUsers();
-    }, []);
-  
-    const loadUsers = async () => {
-      const result = await axios.get("https://fake-server-walkover.herokuapp.com/users");
-      setUser(result.data.reverse());
-    };
+const Database = ({users}) => {
+    const {isAuthenticated} = useAuth0();
   
     const deleteUser = async id => {
-      toast.warning('Deleted the user');
       await axios.delete(`https://fake-server-walkover.herokuapp.com/users/${id}`);
-      loadUsers();
+      window.location.reload(false);
+      toast.warning('Deleted the user');
     };
 
     if (isAuthenticated){
       return (
         <div className="container-fluid bg-white">
           <div className="py-4">
-            <h1>Database</h1>
             <Link className="btn btn-outline-dark my-3" to="/user/add">Add User</Link>
             
             <table class="table border shadow">

@@ -3,7 +3,7 @@ import './App.css';
 import {NavBar, Footer, Loading, AddUser, EditUser, ViewUser} from './components';
 import { Container } from "react-bootstrap";
 import { Route, Routes } from 'react-router-dom';
-import { Home, Profile, Database } from "./views";
+import { Home, Profile, DataTable } from "./views";
 import { useAuth0 } from '@auth0/auth0-react';
 
 
@@ -20,7 +20,7 @@ function App() {
       <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/database" element={<Database />} />
+          <Route path="/database" element={<DataTable />} />
 
           <Route path="/user/add" element={<AddUser />} />
           <Route path="/users/edit/:id" element={<EditUser />} />
