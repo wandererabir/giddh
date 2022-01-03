@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 import { Container} from "react-bootstrap";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAuth0 } from '@auth0/auth0-react';
 
 const Database = ({users}) => {
-    const {isAuthenticated} = useAuth0();
   
     const deleteUser = async id => {
       await axios.delete(`https://fake-server-walkover.herokuapp.com/users/${id}`);
@@ -15,7 +13,6 @@ const Database = ({users}) => {
       toast.warning('Deleted the user');
     };
 
-    if (isAuthenticated){
       return (
         <div className="container-fluid bg-white">
           <div className="py-4">
@@ -56,14 +53,6 @@ const Database = ({users}) => {
           </div>
         </div>
       )
-    }
-    else{
-      return(
-        <Container className="mb-5 text-white text-center">
-        <h1>You can't access database</h1>
-       </Container>
-      )
-    }
     
 }
 
