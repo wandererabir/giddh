@@ -40,7 +40,7 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 * Project documentation 
 
 ## Balsamiq designs
-![design1](https://github.com/wandererabir/giddh/blob/main/src/assets/image%20(1).png =250x250)<br>
+![design1](https://github.com/wandererabir/giddh/blob/main/src/assets/image%20(1).png)<br>
 ![design2](https://github.com/wandererabir/giddh/blob/main/src/assets/image%20(2).png)<br>
 ![design3](https://github.com/wandererabir/giddh/blob/main/src/assets/image%20(4).png)<br>
 ![design4](https://github.com/wandererabir/giddh/blob/main/src/assets/image%20(3).png)<br>
