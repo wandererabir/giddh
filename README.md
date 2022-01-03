@@ -40,7 +40,11 @@ The beta version is deployed in : https://giddh-walkover.herokuapp.com/
 * Project documentation 
 
 ## Balsamiq designs
-
+![design1](https://github.com/wandererabir/giddh/blob/main/src/assets/image%20(1).png)<br>
+![design1]()
+![design1]()
+![design1]()
+![design1]()
 ## Sudo Code
 #### Log In/ Sign Up using auth0
  
